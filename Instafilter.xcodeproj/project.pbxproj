@@ -11,6 +11,7 @@
 		EC7BB78427C925D5003B2558 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7BB78327C925D5003B2558 /* ContentView.swift */; };
 		EC7BB78627C925D8003B2558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7BB78527C925D8003B2558 /* Assets.xcassets */; };
 		EC7BB78927C925D8003B2558 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7BB78827C925D8003B2558 /* Preview Assets.xcassets */; };
+		EC7BB79027CA8A1B003B2558 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7BB78F27CA8A1A003B2558 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EC7BB78327C925D5003B2558 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC7BB78527C925D8003B2558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC7BB78827C925D8003B2558 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC7BB78F27CA8A1A003B2558 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				EC7BB78127C925D5003B2558 /* InstafilterApp.swift */,
 				EC7BB78327C925D5003B2558 /* ContentView.swift */,
+				EC7BB78F27CA8A1A003B2558 /* ImagePicker.swift */,
 				EC7BB78527C925D8003B2558 /* Assets.xcassets */,
 				EC7BB78727C925D8003B2558 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7BB79027CA8A1B003B2558 /* ImagePicker.swift in Sources */,
 				EC7BB78427C925D5003B2558 /* ContentView.swift in Sources */,
 				EC7BB78227C925D5003B2558 /* InstafilterApp.swift in Sources */,
 			);
