@@ -10,6 +10,10 @@ import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
+    
+    // below is the little hack to make Xcode generate the correct stubs for PHPickerViewController
+    //     typealias UIViewControllerType = PHPickerViewController
+
 
     // empty class to create coordinator that bridges UIkit and SwitUI, see related func makeCoordinator
     class Coordinator: NSObject, PHPickerViewControllerDelegate {
@@ -21,10 +25,13 @@ struct ImagePicker: UIViewControllerRepresentable {
         }
         
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            // tell picker to go away
             picker.dismiss(animated: true)
             
+            // exit if no selection was made
             guard let provider = results.first?.itemProvider else { return }
             
+            // if this has an image we can use, then assign it to parent.image
             if provider.canLoadObject(ofClass: UIImage.self) {
                 provider.loadObject(ofClass: UIImage.self) { image, _ in
                     self.parent.image = image as? UIImage
@@ -36,8 +43,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
     }
     
-    // below is the little hack to make Xcode generate the correct stubs for PHPickerViewController
-    //     typealias UIViewControllerType = PHPickerViewController
+    
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
         config.filter = .images
